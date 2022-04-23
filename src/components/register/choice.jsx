@@ -11,11 +11,11 @@ function Choice() {
   </Button>
         <br/>
       </Link>
-      <Link to="/register/seller">
-  <Button variant="primary" type="submit">
-    Signup as Seller
-  </Button>
-      </Link>
+  {/*     <Link to="/register/seller"> */}
+  {/* <Button variant="primary" type="submit"> */}
+  {/*   Signup as Seller */}
+  {/* </Button> */}
+  {/*     </Link> */}
   </div>
       );
 }
