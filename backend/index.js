@@ -1,24 +1,15 @@
 //jshint esversion:6
-const express = require("express")
-const app = express();
+const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
 const port = 5000
 
-app.use(cors())
-app.use(express.json())
+const app = express();
+// app.use(cors())
+// app.use(express.json())
+mongoose.connect('mongodb://localhost:27017/ebook-management')
 
-app.get('/api/register', (req, res) => {
-  res.send('Hello World!')
-})
-
-
-app.post("/api/register", function(req , res){
-  console.log(req.body)
-  res.json({status: 'ok'})
-})
-
-// app.listen(5000, function(){
+app.use('/api/register', require('./routes/register.js')) // app.listen(5000, function(){
 //   console.log("server is running");
 // });
 app.listen(port, () => {
