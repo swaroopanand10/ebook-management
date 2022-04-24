@@ -8,7 +8,9 @@ const mongoose = require("mongoose")
 app.use(cors())
 app.use(express.json())
 
-app.get("/", function(req , res){
+app.post("/api/register", function(req , res){
+  console.log(req.body)
+  res.json({status: 'ok'})
 
 })
 app.listen(5000, function(){
