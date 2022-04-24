@@ -10,7 +10,7 @@ function Userregister() {
 
   async function registerUser(event){
   event.preventDefault()
-  const response= await fetch('https://localhost:5000/api/register',{
+  const response= await fetch('http://localhost:5000/api/register',{
   method: 'Post',
   headers: {
     'Content-Type': 'application/json',
@@ -60,7 +60,10 @@ function Userregister() {
 
   <Form.Group className="mb-3" controlId= "formGridPassword">
     <Form.Label>Retype Password</Form.Label>
-    <Form.Control value={password} type= "Password" placeholder= "Confirm Password" />
+    <Form.Control  
+            value={password} 
+            onChange= {(ev) => setPassword(ev.target.value)}
+            type= "Password" placeholder= "Enter Password" />
   </Form.Group>
 
   <Button variant="primary" type="submit">
