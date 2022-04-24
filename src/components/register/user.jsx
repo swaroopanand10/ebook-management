@@ -7,14 +7,14 @@ function Userregister() {
 <Form>
   <Row className="mb-3">
     <Form.Group as={Col} controlId="formGridName">
-      <Form.Label>First Name</Form.Label>
-      <Form.Control type="Text" placeholder="First name" />
+      <Form.Label>Name</Form.Label>
+      <Form.Control type="Text" placeholder="Name" />
     </Form.Group>
 
-    <Form.Group as={Col} controlId="formGridLastName">
-      <Form.Label>Last Name</Form.Label>
-      <Form.Control type="Text" placeholder="Last name" />
-    </Form.Group>
+    {/* <Form.Group as={Col} controlId="formGridLastName"> */}
+    {/*   <Form.Label>Last Name</Form.Label> */}
+    {/*   <Form.Control type="Text" placeholder="Last name" /> */}
+    {/* </Form.Group> */}
   </Row>
 
   <Form.Group className="mb-3" controlId="formGridEmailAddress">
