@@ -15,16 +15,24 @@ router.get('/', (req, res) => {
 
 router.post("/", async (req,res)=>{
   console.log(req.body)
-  try {
-		await User.create({
-			fname: req.body.fname,
-			email: req.body.email,
-			password: req.body.password,
-		})
-		res.json({ status: 'ok' })
-	} catch (err) {
+  try{
+  const user = User(req.body); 
+  await user.save()
+  res.json({ status: 'ok'})
+  }
+	 catch (err) {
 		res.json({ status: 'error', error: 'Duplicate email' })
 	}
+ //  try {
+	// 	await User.create({
+	// 		fname: req.body.fname,
+	// 		email: req.body.email,
+	// 		password: req.body.password,
+	// 	})
+	// 	res.json({ status: 'ok' })
+	// } catch (err) {
+	// 	res.json({ status: 'error', error: 'Duplicate email' })
+	// }
 })
 
 module.exports=router
