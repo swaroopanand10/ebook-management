@@ -10,7 +10,7 @@ app.use(cors())
 // app.use(express.json())
 // mongoose.connect('mongodb://localhost:27017/ebook-management')
 
-app.use('/api/register', require('./routes/register.js')) // app.listen(5000, function(){
+app.use('/api/auth', require('./routes/register.js')) // app.listen(5000, function(){
 //   console.log("server is running");
 // });
 app.listen(port, () => {
