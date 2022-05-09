@@ -6,18 +6,19 @@ function Books() {
   return (
     <div>
       <h1>Explore books</h1>
+      {/* <input type="text" placeholder="search for books here">search for books</input> */}
+      <input placeholder="search here" type="text" id="fname" name="fname"/>
       <br/>
-      <ol>
-      <li>sample book 1</li>
-      <li>sample book 2</li>
-      <li>sample book 3</li>
-      <li>sample book 4</li>
-      <li>sample book 5</li>
-      <li>sample book 6</li>
-      <li>sample book 7</li>
-      <li>sample book 8</li>
-      <li>sample book 9</li>
-      </ol>
+      <br/>
+      <a href="">sample book 1</a><br/>
+      <a href="">sample book 2</a><br/>
+      <a href="">sample book 3</a><br/>
+      <a href="">sample book 4</a><br/>
+      <a href="">sample book 5</a><br/>
+      <a href="">sample book 6</a><br/>
+      <a href="">sample book 7</a><br/>
+      <a href="">sample book 8</a><br/>
+      <a href="">sample book 9</a><br/>
       
     </div>
   )
